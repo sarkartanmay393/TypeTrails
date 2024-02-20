@@ -2,6 +2,6 @@
 
 ##### Build with Nextjs, Zustand, Supabase
 
-Demo: https://tsx-typetrails.vercel.app/
+Demo: https://typetrails.vercel.app/
 
 ![screenshot](screenshot.png)
