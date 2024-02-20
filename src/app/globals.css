@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.underline {
+  text-decoration-color: chocolate;
+  animation: blink ease-out 0.7s infinite;
+  /* color: brown; */
+}
+
+@keyframes blink {
+  from {
+    text-decoration-color: chocolate;
+    /* color: brown; */
+  }
+
+  to {
+    text-decoration-color: transparent;
+    /* color: black; */
+  }
+}
+
+@keyframes random {
+  from {
+    color: green;
+    filter: drop-shadow(2px 3px 16px lightgreen);
+  }
+
+  50% {
+    color: chocolate;
+    filter: drop-shadow(2px 3px 13px blue);
+  }
+
+  to {
+    color: blueviolet;
+    filter: drop-shadow(2px 3px 12px green);
+  }
+}
+
+.text-vercel-effect {
+  filter: drop-shadow(2px 3px 16px purple);
+  transition: color 0.3s ease-in-out;
+  animation: random 2.4s ease-in-out infinite;
+}
+
+
+
+.text-vercel-effect:hover {
+  color: #0070f3;
+}
