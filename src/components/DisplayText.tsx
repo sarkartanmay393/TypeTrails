@@ -58,17 +58,22 @@ export function DisplayText({ handleInputChange, isComplete }: any) {
           <Stats />
         </div>
       )}
-      <p>
+      <p className="drop-shadow-md">
         {!isLoading &&
           !isComplete &&
-          text.split("").map((char: string, index: number) => (
-            <span
-              key={index}
-              className={cn(charLevelChecks(userInput, index, char, isFocused))}
-            >
-              {char}
-            </span>
-          ))}
+          text
+            .slice(0, 520)
+            .split("")
+            .map((char: string, index: number) => (
+              <span
+                key={index}
+                className={cn(
+                  charLevelChecks(userInput, index, char, isFocused)
+                )}
+              >
+                {char}
+              </span>
+            ))}
       </p>
       {!isLoading && (
         <input

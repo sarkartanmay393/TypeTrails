@@ -37,6 +37,7 @@ const config = {
     colors: {
       correct: colors.green[600],
       mistake: colors.red[500],
+      gray: colors.gray,
     },
   },
   plugins: [require("tailwindcss-animate")],

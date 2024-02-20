@@ -22,7 +22,8 @@ export function Stats() {
         Time: <span className="font-medium text-gray-700">{time}s</span>
       </div>
       <div className="shadow-sm rounded-md px-2 w-full flex justify-between text-2xl font-bold border-2">
-        Speed: <span className="font-medium text-gray-700">{speed}wpm</span>
+        Speed:{" "}
+        <span className="font-medium text-gray-700">{speed * 10} wpm</span>
       </div>
       <div className="shadow-sm rounded-md px-2 w-full flex justify-between text-2xl font-bold border-2">
         Accuracy: <span className="font-medium text-gray-700">{accuracy}%</span>
