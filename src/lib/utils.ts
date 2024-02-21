@@ -42,7 +42,7 @@ export const charLevelChecks = (
   const currentPosition =
     userInput.length === index
       ? focusOnTyping
-        ? "underline underline-offset-2 decoration-red-300"
+        ? " underline-offset-2 decoration-red-300 focus-pulse"
         : ""
       : "";
 
@@ -51,9 +51,7 @@ export const charLevelChecks = (
 
 export function calculateSpeed(wordCount: number, time: number) {
   let seconds = time / 1000;
-  // seconds = seconds % 60;
-  // let words = 60*(wordCount/seconds)
   let minutes = seconds / 60;
-  let speed = minutes ? (wordCount / minutes).toFixed(1) : 0;
+  let speed = minutes ? (wordCount / minutes).toFixed(0) : 0;
   return Number(speed);
 }

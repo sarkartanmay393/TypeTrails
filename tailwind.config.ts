@@ -35,6 +35,7 @@ const config = {
       },
     },
     colors: {
+      ...colors,
       correct: colors.green[600],
       mistake: colors.red[500],
       gray: colors.gray,

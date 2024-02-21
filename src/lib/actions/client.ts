@@ -2,12 +2,14 @@
 
 import { createClient } from "../supabase/client";
 
-export async function getListOfRandomText(): Promise<{ quote: string }[]> {
+export async function getListOfRandomText(
+  genre: string[] = ["humor"]
+): Promise<{ quote: string }[]> {
   const supabase = createClient();
   const { data, error } = await supabase
     .from("typetrails")
     .select("quote")
-    .in("category", ["humor"]);
+    .in("category", genre);
   if (error)
     return [
       {
