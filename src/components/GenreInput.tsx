@@ -42,8 +42,8 @@ const statuses: Status[] = [
 export function GenreInputEle() {
   const [open, setOpen] = useState(false);
   const { quoteGenre, setQuoteGenre } = useStoreState((state) => state);
-  const [selectedStatus, setSelectedStatus] = useState<Status>({
-    value: quoteGenre,
+  const [selectedStatus, setSelectedStatus] = useState<Status | null>({
+    value: quoteGenre || "humor",
     label: "Humor",
     icon: HelpCircle,
   });
