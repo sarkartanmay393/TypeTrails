@@ -1,3 +1,5 @@
+<img style="width:5rem;" src="public/logo.webp" alt="" />
+
 ### TypeTrails
 
 ##### Build with Nextjs, Zustand, Supabase
